@@ -116,7 +116,13 @@ class DoubleLinkedList
                 if (START != NULL)
                 START->prev = NULL;
             }
-            
+            else
+            {
+                //Step 3 link previous node
+                current->prev->next = current->next;
+                
+                
+            }
 
             
 
