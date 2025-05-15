@@ -32,5 +32,8 @@ class DoubleLinkedList
             Node *newNode = new Node();
 
             
+            // Step 2: Assign value to the data fields
+            newNode->noMhs = nim;
+
         }
 }
