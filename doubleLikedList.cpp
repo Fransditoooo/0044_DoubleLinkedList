@@ -98,7 +98,7 @@ class DoubleLinkedList
  
             Node *current = START;
  
-            //step 1 traverse the lost tp final node
+            //Step 1 traverse the lost tp final node
             while (current != NULL && current->noMhs != rollNo)
                  current = current->next;
                  if (current == NULL)
@@ -107,7 +107,7 @@ class DoubleLinkedList
                      return;
                  }
 
-                //step 2 if node is at the beginning\
+                //Step 2 if node is at the beginning\
 
                 if (current == START)
             
@@ -121,6 +121,10 @@ class DoubleLinkedList
                 //Step 3 link previous node
                 current->prev->next = current->next;
                 
+                //Step 4 of cirrent os not the last node
+                if (current->next != NULL)
+                    current->next->prev = current->prev;
+
                 
             }
 
