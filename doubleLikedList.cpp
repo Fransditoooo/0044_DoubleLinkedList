@@ -60,7 +60,7 @@ class DoubleLinkedList
             }
 
             //insert om between node
-            //step 8
+            // Step 8
             Node *current = START;
             while (current->next !=NULL && current->next->noMhs)
             {
@@ -73,10 +73,15 @@ class DoubleLinkedList
                 return;
             }
 
-            
+            // Step 9
+            newNode->next = current->next; //part A
+            newNode->prev = current; //part B
 
-        
+            //insert last node
+            if (current->next != NULL)
+                current->next->prev = newNode; //part C
 
+            current->next = newNode; //partD
 
         }
 }
