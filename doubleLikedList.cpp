@@ -84,4 +84,29 @@ class DoubleLinkedList
             current->next = newNode; //partD
 
         }
+
+        void hapus()
+        {
+            if (START == NULL)
+            {
+                cout << "nList is empty" << endl;
+                return;
+            }
+            cout << "\nEnter the roll number of the student whose record is to be deleted: ";
+            int rollNo;
+            cin >> rollNo;
+ 
+            Node *current = START;
+ 
+            //step 1 traverse the lost tp final node
+            while (current != NULL && current->noMhs != rollNo)
+                 current = current->next;
+                 if (current == NULL)
+                 {
+                     cout << "Record not found" << endl;
+                     return;
+                 }
+     
+     
+        }
 }
